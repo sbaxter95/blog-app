@@ -14,23 +14,29 @@ class CommentsController < ApplicationController
     @comments = @post.comments.find(params[:id])
   end
 
-  def create
-    post = Post.find(params[:post_id])
-    post.comments.create(comment_params)
-    redirect_to post
-  end
-
   def edit
     @post = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
   end
 
-  def update
-    post = Post.find(params[:post_id])
-    comment = post.comments.find(params[:id])
-    comment.update(comment_params)
-    redirect_to post
+  def create
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.create(comment_params)
+    if @comment.save
+      redirect_to @post
+    else
+      render :new
+    end
   end
+ 
+ def update
+   @comment = Comment.find(params[:id])
+   if @comment.update(comment_params)
+     redirect_to @comment
+   else
+     render :edit
+   end
+ end
 
   def destroy
     post = Post.find(params[:post_id])

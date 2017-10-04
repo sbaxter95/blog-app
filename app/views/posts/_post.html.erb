@@ -4,4 +4,5 @@
 <h3><%= post.category%></h3>
 <h3><%= post.image%></h3>
 
-<%= link_to "Show Page", post if action_name == "index" %> |
+<%= link_to "Show Post", post if action_name == "index" %> |
+<%= link_to "New Post", new_post_path if action_name == 'index'%>

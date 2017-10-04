@@ -1,3 +1,7 @@
 <h1>Post</h1>
 
 <%= render @post %>
+
+<%= render @post.comments %>
+
+<%= link_to "Destroy", @post, method: :delete, data: { confirm: "Are you sure?" } %>

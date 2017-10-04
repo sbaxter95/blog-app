@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     new_post = Post.create(post_params)
     new_post.save
 
-    redirect_to new_album
+    redirect_to new_post
   end
 
   def update

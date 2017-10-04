@@ -1,2 +1,6 @@
 <h4><%= comment.commenter %></h4>
 <h4><%= comment.body %></h4>
+<h4><%= comment.location%></h4>
+
+<%= link_to 'Show Comment', post_comment_path(@post, comment)unless controller_name == 'comments'%> 
+<%= link_to 'New comment', new_post_comment_path(@post, comment) %>

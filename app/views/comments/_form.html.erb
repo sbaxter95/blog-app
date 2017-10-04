@@ -1,0 +1,16 @@
+<%= form_for([@post, @comment]) do |f| %>
+	<%= f.label :commenter %>
+	<%= f.text_field :commenter %>
+
+	<%= f.label :body %>
+	<%= f.text_field :body %>
+
+	<%= f.label :location %>
+	<%= f.text_field :location %>
+
+	<%= f.label :email_address %>
+	<%= f.text_field :email_address %>
+
+	<%= f.submit %>
+
+<% end %>

@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-p1 = Post.create!(title: 'Mike Glennon benched in favour of Trubisky', body: 'Rookie Mitch Trubisky finally has his time to
+p1 = Post.create!(title: 'Mike Glennon benched', body: 'Rookie Mitch Trubisky finally has his time to
 	shine for the Bears as mediocre quarterback Mike Glennon is finally benched after several weeks of disappointing 
-	performances', author: 'Dallas Brady', image: 'url', category: 'news')
+	performances', author: 'Dallas Brady', image: 'http://static.nfl.com/static/content/public/photo/2017/03/21/0ap3000000794258_thumbnail_200_150.jpg', category: 'news')
 
 Comment.create!(commenter: 'Chad Bryce', body: 'Excellent news, Glennon has been playing terribly', email_address: 'bearsfan@hotmail.com', location: 'Chicago', post_id: p1.id)
 Comment.create!(commenter: 'Austin Starr', body: 'Our rookie quarterback is much better', email_address: 'houstonfan@hotmail.com', location: 'Houston', post_id: p1.id)

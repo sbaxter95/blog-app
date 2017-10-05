@@ -1,6 +1,8 @@
-<h4><%= comment.commenter %></h4>
-<h4><%= comment.body %></h4>
-<h4><%= comment.location%></h4>
+<div class="border">
+	<h4><%= comment.commenter %></h4>
+	<h4><%= comment.body %></h4>
+	<h4>Location: <%= comment.location%></h4>
 
-<%= link_to 'Show Comment', post_comment_path(@post, comment)unless controller_name == 'comments'%> 
-<%= link_to 'Back', post_path %> 
+	<%= link_to 'Show Comment', post_comment_path(@post, comment)unless controller_name == 'comments'%> 
+	<%= link_to 'Back', post_path %> 
+</div>
